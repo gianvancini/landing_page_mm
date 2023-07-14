@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Mobrisk Móveis</title>
+</head>
+<body>
+    <div class="fixed-buttons">
+        <a href="https://www.facebook.com/gian.vancini" target="_blank" class="social-button facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/gian.vancini" target="_blank" class="social-button instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=54981187845" target="_blank" class="whatsapp-button">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>     
+    <header>
+        <div class="header-container">
+            <h3>Mobrisk Móveis</h3>
+            <p>A evolução na decoração de interiores</p>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#cozinha" class="scroll-link">Cozinha</a></li>
+                <li><a href="#sala" class="scroll-link">Sala</a></li>
+                <li><a href="#closets" class="scroll-link">Closets</a></li>
+                <li><a href="#banheiro" class="scroll-link">Banheiro</a></li>
+                <li><a href="#divisorias" class="scroll-link">Divisórias</a></li>
+                <li><a href="#empresarial" class="scroll-link">Empresarial</a></li>
+                <li><a href="#sobre" class="scroll-link">Quem Somos</a></li>
+                <li><a href="#contato" class="scroll-link">Orçamentos</a></li>
+            </ul>
+        </nav> 
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="bi bi-list"></i>
+        </button>
+    </header>
+    <main>
+        <div class="movel-content" id="cozinha">
+            <div class="marg-content"></div>
+            <div class="text-content">
+                <h3>Cozinha</h3>
+                <p>Oferecemos uma variedade de conceitos de cozinha para atender aos diversos estilos e funcionalidades desejados. Desde cozinhas modernas e minimalistas, que privilegiam o design clean e linhas retas, até cozinhas rústicas e acolhedoras, com tons naturais e materiais orgânicos. Também criamos cozinhas funcionais, otimizando o espaço com soluções inteligentes de armazenamento e áreas de preparação práticas. </p>
+            </div>
+            
+            <div class="img-content">
+                <a href="#cozinha" onclick="openGallery('cozinha')">
+                    <img src="./img/coz/1.jpg" alt="Cozinha moderna">
+                </a>
+            </div>
+
+            <div class="overlay" id="overlay-cozinha">
+                <div class="gallery" id="gallery">
+                    <span class="close" onclick="closeGallery('cozinha')">&times;</span>
+                    <img class="gallery-images-cozinha" src="./img/coz/1.jpg">
+                    <img class="gallery-images-cozinha" src="./img/coz/2.jpg">
+                    <img class="gallery-images-cozinha" src="./img/coz/3.jpg">
+                    <a class="prev" onclick="changeImage('cozinha', -1)">&#10094;</a>
+                    <a class="next" onclick="changeImage('cozinha', 1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movel-content" id="sala">
+            <div class="marg-content"></div>
+            <div class="text-content">
+                <h3>Sala</h3>
+                <p>Seja uma sala de estar contemporânea, elegante ou aconchegante, nossa empresa de móveis planejados está pronta para criar o ambiente perfeito para momentos de relaxamento e convívio.</p>
+            </div>
+            
+            <div class="img-content">
+                <a href="#sala" onclick="openGallery('sala')">
+                    <img src="./img/sal/1.jpg" alt="Sala moderna">
+                </a>
+            </div>
+
+            <div  class="overlay" id="overlay-sala">
+                <div id="gallery">
+                    <span class="close" onclick="closeGallery('sala')">&times;</span>
+                    <img class="gallery-images-sala" src="./img/sal/1.jpg">
+                    <img class="gallery-images-sala" src="./img/sal/2.jpg">
+                    <img class="gallery-images-sala" src="./img/sal/3.jpg">
+                    <a class="prev" onclick="changeImage('sala', -1)">&#10094;</a>
+                    <a class="next" onclick="changeImage('sala', 1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="movel-content" id="closets">
+            <div class="marg-content"></div>
+            <div class="text-content">
+                <h3>Closets</h3>
+                <p>Transforme o seu quarto em um refúgio organizado e sofisticado com nossos closets planejados, projetados para atender às suas necessidades de armazenamento e estilo.</p>
+            </div>
+            
+            <div class="img-content">
+                <a href="#closets" onclick="openGallery('closets')">
+                    <img src="./img/clo/1.jpg" alt="Sala moderna">
+                </a>
+            </div>
+
+            <div class="overlay" id="overlay-closets">
+                <div id="gallery">
+                    <span class="close" onclick="closeGallery('closets')">&times;</span>
+                    <img class="gallery-images-closets" src="./img/clo/1.jpg">
+                    <img class="gallery-images-closets" src="./img/clo/2.jpg">
+                    <img class="gallery-images-closets" src="./img/clo/3.jpg">
+                    <a class="prev" onclick="changeImage('closets', -1)">&#10094;</a>
+                    <a class="next" onclick="changeImage('closets', 1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="movel-content" id="banheiro">
+            <div class="marg-content"></div>
+            <div class="text-content">
+                <h3>Banheiro</h3>
+                <p>Desfrute de um oásis de tranquilidade em seu banheiro com nossos móveis planejados, que combinam funcionalidade, elegância e design para criar um espaço de bem-estar.</p>
+            </div>
+            
+            <div class="img-content">
+                <a href="#banheiro" onclick="openGallery('banheiro')">
+                    <img src="./img/ban/1.jpg" alt="Sala moderna">
+                </a>
+            </div>
+
+            <div class="overlay" id="overlay-banheiro">
+                <div id="gallery">
+                    <span class="close" onclick="closeGallery('banheiro')">&times;</span>
+                    <img class="gallery-images-banheiro" src="./img/ban/1.jpg">
+                    <img class="gallery-images-banheiro" src="./img/ban/2.jpg">
+                    <img class="gallery-images-banheiro" src="./img/ban/3.jpg">
+                    <a class="prev" onclick="changeImage('banheiro',-1)">&#10094;</a>
+                    <a class="next" onclick="changeImage('banheiro', 1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="movel-content" id="divisorias">
+            <div class="marg-content"></div>
+            <div class="text-content">
+                <h3>Divisorias</h3>
+                <p>Crie ambientes distintos e versáteis em sua casa com nossas divisórias planejadas, permitindo flexibilidade e privacidade sem comprometer o estilo e a harmonia do espaço.</p>
+            </div>
+            
+            <div class="img-content">
+                <a href="#divisorias" onclick="openGallery('divisorias')">
+                    <img src="./img/div/1.jpg" alt="Sala moderna">
+                </a>
+            </div>
+
+            <div class="overlay" id="overlay-divisorias">
+                <div id="gallery">
+                    <span class="close" onclick="closeGallery('divisorias')">&times;</span>
+                    <img class="gallery-images-divisorias" src="./img/div/1.jpg">
+                    <img class="gallery-images-divisorias" src="./img/div/2.jpg">
+                    <img class="gallery-images-divisorias" src="./img/div/3.jpg">
+                    <a class="prev" onclick="changeImage('divisorias', -1)">&#10094;</a>
+                    <a class="next" onclick="changeImage('divisorias', 1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="movel-content" id="empresarial">
+            <div class="marg-content"></div>
+            <div class="text-content">
+                <h3>Empresarial</h3>
+                <p>Oferecemos soluções personalizadas de móveis para diversos tipos de negócios, sejam eles comércios, escritórios ou academias. Nossa expertise em móveis planejados garante espaços funcionais e esteticamente atrativos, projetados para atender às necessidades específicas do seu negócio, proporcionando um ambiente convidativo e profissional.</p>
+            </div>
+            
+            <div class="img-content">
+                <a href="#empresarial" onclick="openGallery('empresarial')">
+                    <img src="./img/emp/1.jpg" alt="Sala moderna">
+                </a>
+            </div>
+
+            <div class="overlay" id="overlay-empresarial">
+                <div id="gallery">
+                    <span class="close" onclick="closeGallery('empresarial')">&times;</span>
+                    <img class="gallery-images-empresarial" src="./img/emp/1.jpg">
+                    <img class="gallery-images-empresarial" src="./img/emp/2.jpg">
+                    <img class="gallery-images-empresarial" src="./img/emp/3.jpg">
+                    <a class="prev" onclick="changeImage('empresarial', -1)">&#10094;</a>
+                    <a class="next" onclick="changeImage('empresarial', 1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section>
+        <div id="sobre">
+            <div class="about-text">
+                <p>Com anos de experiência no ramo de móveis planejados, a Mobriski Móveis se dedica a transformar ambientes em verdadeiros refúgios, combinando funcionalidade, design e qualidade. Nossa missão é superar as expectativas dos clientes, proporcionando soluções criativas e sob medida para cada projeto.</p>
+                <br>
+                <p>Valorizamos a qualidade em cada etapa do processo, desde o design inicial até a instalação dos móveis. A satisfação do cliente é a nossa prioridade, e nos orgulhamos de oferecer um atendimento personalizado e soluções sob medida para cada projeto.</p>
+                <br>
+                <p>Seja para sua casa, seu escritório ou seu negócio, estamos prontos para tornar seus sonhos e visões em realidade. Venha conhecer nosso trabalho e descubra como podemos transformar seu espaço em algo extraordinário.</p>
+            </div>
+            <div id="address">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div id="address-detail">
+                    <p>Onde estamos:</p>
+                    <p>RS 434, 1325</p>
+                    <p>Ciriaco - RS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="key-benefits">
+        <h2>O que entregamos:</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <div id="benefit-1" class="benefit-img"></div>
+                <p>5 anos de garantia</p>
+            </div>
+            <div class="benefit">
+                <div id="benefit-2" class="benefit-img"></div>
+                <p>Serviço de entrega e montagem.</p>
+            </div>
+            <div class="benefit">
+                <div id="benefit-3" class="benefit-img"></div>
+                <p>Tecnologia de última geração.</p>
+            </div>
+            <div class="benefit">
+                <div id="benefit-4" class="benefit-img"></div>
+                <p>Móveis de alto padrão.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contato">
+        <h2>Contato:</h2>
+        <form action="post">
+            <input type="text" name="name" placeholder="Digite seu nome" required>
+            <input type="email" name="email" placeholder="Digite seu e-mail" required>
+            <input type="text" name="phone" placeholder="Digite seu telefone" required>
+            <textarea name="mais" placeholder="Digite sua mensagem..."></textarea>
+            <input type="button" value="Enviar">
+        </form>
+    </section>
+    <footer>
+        <div class="footer" id="footer">
+            <h4>Mobrisk Móveis</h4>
+            <p>A evolução na decoração de interiores</p>
+            <p>2023 &copy; Todos os direitos reservados.</p>
+        </div>
+    </footer> 
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
