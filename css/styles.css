@@ -165,6 +165,9 @@ nav a {
   justify-content: center;
 }
 
+.mobile-only {
+  display: none;
+}
 
 .img-content img {
   width: 200px;
@@ -532,6 +535,20 @@ nav a {
     width: 90%;
     height: auto;
     margin-bottom: 50px;
+  }
+
+  .img-content a {
+    position: relative;
+    opacity: .7;
+  }
+
+  .mobile-only{
+    display: inline-block;
+    position: absolute;
+    font-size: 2em;
+    color: var(--text-secondary);
+    order: 1;
+    font-weight: bold;
   }
 
   /* ---- gallery ----- */
